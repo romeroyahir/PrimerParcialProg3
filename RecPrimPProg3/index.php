@@ -1,10 +1,8 @@
 <?php
 require __DIR__ . '/vendor/autoload.php';
 require('./controllers/usuario.php');
-require('./controllers/precio.php');
 require('./controllers/autos.php');
 require('./class/User.php');
-require('./class/Precio.php');
 require('./class/Autos.php');
 require('./helpers/helper.php');
 
@@ -26,12 +24,6 @@ switch ($metodo) {
         }else if($path == "/servicio"){
           //  pedidoService(["id","modelo","patente","precio"]);
         }
-        
-        /*else if($path == "/precio"){
-            addPrecio(["precio_hora","precio_estadia","precio_mensual"],$token);
-        }else if($path == "/ingreso"){
-            ingresoAuto(["patente","tipo"],$token);
-        }*/
         else{
             response(false,"BAD REQUEST","msg");
         }
@@ -47,17 +39,11 @@ switch ($metodo) {
             else{
                 response(false,"BAD REQUEST","msg");
             }
+            if($path == "/turno"){
+
+            }
             
-            /*
-        }else if($path == "/importe/hora"){
-            totalImportes("hora");
-        }else if($path == "/importe/estadia"){
-            totalImportes("estadia");
-        }else if($path == "/importe/mensual"){
-            totalImportes("mensual");
-        }else{
-            response(false,"BAD REQUEST","msg");
-        }*/
+
     default:
         response(false,"BAD REQUEST","msg");
         break;

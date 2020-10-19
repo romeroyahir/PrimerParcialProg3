@@ -1,0 +1,180 @@
+{
+	"info": {
+		"_postman_id": "1a643e36-7078-43cc-a72c-efbd4ee2f252",
+		"name": "recuprog",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "recu pt1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "3ermail@pepe.com",
+							"type": "text"
+						},
+						{
+							"key": "tipo",
+							"value": "user",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1/RecPrimPProg3/index.php/registro",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"path": [
+						"RecPrimPProg3",
+						"index.php",
+						"registro"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "recu pt2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "blabla@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "text"
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1/RecPrimPProg3/index.php/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"path": [
+						"RecPrimPProg3",
+						"index.php",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "recu pt3",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0aXBvIjoiYWRtaW4iLCJlbWFpbCI6ImJsYWJsYUBnbWFpbC5jb20ifQ.oe_uv9KrvPeizivDXwK6x_T7W_89YvBFYYbprYG4RIE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "marca",
+							"value": "Ford",
+							"type": "text"
+						},
+						{
+							"key": "modelo",
+							"value": "Mustang",
+							"type": "text"
+						},
+						{
+							"key": "patente",
+							"value": "JEJ234",
+							"type": "text"
+						},
+						{
+							"key": "precio",
+							"value": "780000",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1/RecPrimPProg3/index.php/vehiculo",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"path": [
+						"RecPrimPProg3",
+						"index.php",
+						"vehiculo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "recu pt4",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1/RecPrimPProg3/index.php/patente?patente=AAA12385",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"path": [
+						"RecPrimPProg3",
+						"index.php",
+						"patente"
+					],
+					"query": [
+						{
+							"key": "patente",
+							"value": "AAA12385"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
